@@ -28,8 +28,8 @@ except socket.error as msg:
     print('Socket could not be created. Error Code : ' + str(msg[0]) + ' Message ' + str(msg[1]))
     sys.exit()
 
-source_ip = '192.168.x.x'
-dest_ip = '192.168.x.x'
+source_ip = '192.168.x.x' #Changer par adresse IP source
+dest_ip = '192.168.x.x'   #Same pour dest
 
 #IP HEADER
 
@@ -59,7 +59,7 @@ tcp_length = 20
 
 pseudo_header = struct.pack('!4s4sBBH', ip_saddr, ip_daddr, 0, socket.IPPROTO_TCP, tcp_length)
 
-tcp_source = 12345
+tcp_source = 12345    #PEnser a bien ouvrir hein.
 tcp_dest = 12345
 tcp_seq = 454
 tcp_ack_seq = 0
